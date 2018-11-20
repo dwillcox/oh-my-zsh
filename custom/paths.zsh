@@ -3,15 +3,19 @@
 hostname=`uname -n`
 
 if [ $hostname == "vader" ]; then
-	export ASTRO_HOME="$HOME/codes/astro"	
+    export ASTRO_HOME="$HOME/codes/astro"	
 fi
 
 if [ $hostname == "zilla.lbl.gov" ]; then
-	export ASTRO_HOME="$HOME/dev-astro"	
+    export ASTRO_HOME="$HOME/dev-astro"	
+fi
+
+if [ $hostname == "groot.astro.sunysb.edu" ]; then
+    export ASTRO_HOME="$HOME"	
 fi
 
 # Add scripts to path
-export PATH="$HOME/codes/scripts:$PATH"
+export PATH="$HOME/scripts:$PATH"
 export PATH="$ASTRO_HOME/job-run-scripts:$PATH"
 export PATH="$HOME/simulation_setups/plotting:$PATH"
 
