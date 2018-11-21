@@ -15,3 +15,7 @@ pdfcat() {
 	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"
 
 }
+
+toes () {
+	$@ > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)
+}
