@@ -2,15 +2,15 @@
 
 hostname=`uname -n`
 
-if [ $hostname == "vader" ]; then
+if [ $hostname=="vader" ]; then
     export ASTRO_HOME="$HOME/codes/astro"	
 fi
 
-if [ $hostname == "zilla.lbl.gov" ]; then
+if [ $hostname=="zilla.lbl.gov" ]; then
     export ASTRO_HOME="$HOME/dev-astro"	
 fi
 
-if [ $hostname == "groot.astro.sunysb.edu" ]; then
+if [ $hostname=="groot.astro.sunysb.edu" ]; then
     export ASTRO_HOME="$HOME"	
 fi
 
