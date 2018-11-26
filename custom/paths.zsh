@@ -2,17 +2,18 @@
 
 hostname=`uname -n`
 
-if [ $hostname=="vader" ]; then
-    export ASTRO_HOME="$HOME/codes/astro"	
+if [[ "$hostname" == "vader" ]]; then
+    ASTRO_HOME="$HOME/codes/astro"
 fi
 
-if [ $hostname=="zilla.lbl.gov" ]; then
-    export ASTRO_HOME="$HOME/dev-astro"	
+if [[ "$hostname" == "zilla.lbl.gov" || "$hostname" == "zilla" ]]; then
+    ASTRO_HOME="$HOME/dev-astro"
 fi
 
-if [ $hostname=="groot.astro.sunysb.edu" ]; then
-    export ASTRO_HOME="$HOME"	
+if [[ "$hostname" == "groot.astro.sunysb.edu" ]]; then
+    ASTRO_HOME="$HOME"	
 fi
+
 
 # Add scripts to path
 export PATH="$HOME/scripts:$PATH"
@@ -38,6 +39,7 @@ export MAESTRO_HOME="$ASTRO_HOME/MAESTRO"
 export CASTRO_HOME="$ASTRO_HOME/Castro"
 export MICROPHYSICS_HOME="$ASTRO_HOME/Microphysics"
 export FBOXLIB_HOME="$ASTRO_HOME/FBoxlib"
+
 
 # Add urca-tools to PATH
 export PATH="$MAESTRO_HOME/Util/postprocessing/urca-tools:$PATH"
