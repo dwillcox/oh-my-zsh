@@ -19,3 +19,7 @@ pdfcat() {
 toes () {
 	$@ > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)
 }
+
+jnbook () {
+	jupyter notebook $@ --ip=127.0.0.1
+}

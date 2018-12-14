@@ -38,7 +38,7 @@ export AMREX_HOME="$ASTRO_HOME/amrex"
 export MAESTRO_HOME="$ASTRO_HOME/MAESTRO"
 export CASTRO_HOME="$ASTRO_HOME/Castro"
 export MICROPHYSICS_HOME="$ASTRO_HOME/Microphysics"
-export FBOXLIB_HOME="$ASTRO_HOME/FBoxlib"
+export FBOXLIB_HOME="$ASTRO_HOME/FBoxLib"
 
 
 # Add urca-tools to PATH
@@ -51,6 +51,9 @@ export PATH="$ASTRO_HOME/amrex/Tools/Postprocessing/F_Src:$PATH"
 export MESASDK_ROOT="$ASTRO_HOME/mesa/mesasdk"
 export MESA_DIR="$ASTRO_HOME/mesa/mesa-r8118"
 
+# Add lua to PATH
+export PATH="/home/dewillcox/local/lua-5.2.1/bin:$PATH"
+
 mesasdk() {
     source $MESASDK_ROOT/bin/mesasdk_init.sh
 }
@@ -59,4 +62,4 @@ mesasdk() {
 export PATH="$HOME/local/Zotero_linux-x86_64:$PATH"
 
 # Add Visit to PATH
-export PATH="$HOME/local/visit2_13_1/bin:$PATH"
+export PATH="$HOME/local/visit/bin:$PATH"
