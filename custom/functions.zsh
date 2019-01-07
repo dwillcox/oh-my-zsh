@@ -26,3 +26,9 @@ toes () {
 jnbook () {
 	jupyter notebook $@ --ip=127.0.0.1
 }
+
+# Establish a SOCKS proxy on localhost port 8880 through
+# the host provided as the argument.
+sshtunnel () {
+        ssh -D 8880 $1
+}
