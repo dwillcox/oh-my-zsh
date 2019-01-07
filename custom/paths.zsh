@@ -6,14 +6,13 @@ if [[ "$hostname" == "vader" ]]; then
     ASTRO_HOME="$HOME/codes/astro"
 fi
 
-if [[ "$hostname" == "zilla.lbl.gov" || "$hostname" == "zilla" ]]; then
+if [[ "$hostname" == "zilla.lbl.gov" || "$hostname" == "zilla" || "$hostname" == "jade" ]]; then
     ASTRO_HOME="$HOME/dev-astro"
 fi
 
 if [[ "$hostname" == "groot.astro.sunysb.edu" ]]; then
     ASTRO_HOME="$HOME"	
 fi
-
 
 # Add scripts to path
 export PATH="$HOME/scripts:$PATH"
