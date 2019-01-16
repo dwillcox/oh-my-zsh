@@ -32,3 +32,8 @@ jnbook () {
 sshtunnel () {
         ssh -D 8880 $1
 }
+
+# Silent find (suppresses permission denied errors)
+sfind () {
+        find $@ 2>&1 | grep -v "Permission denied"
+}
