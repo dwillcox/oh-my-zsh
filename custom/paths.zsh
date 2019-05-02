@@ -14,10 +14,16 @@ if [[ "$hostname" == "groot.astro.sunysb.edu" ]]; then
     ASTRO_HOME="$HOME"	
 fi
 
-# NVIDIA compilers
 if [[ "$hostname" == "jade" ]]; then
-    CUDA_HOME="/usr/local/cuda-10.0"
+    ASTRO_HOME="$HOME"
+    export LD_LIBRARY_PATH="$HOME/local/install/hdf5-1.10.4/lib:$LD_LIBRARY_PATH"
+fi
+
+# NVIDIA compilers and toolkit
+if [[ "$hostname" == "jade" ]]; then
+    CUDA_HOME="/usr/local/cuda-10.1"
     export PATH="$CUDA_HOME/bin:$PATH"
+    export PATH="$CUDA_HOME/NsightCompute-2019.1:$PATH"
     export LD_LIBRARY_PATH="$CUDA_HOME/lib64:$LD_LIBRARY_PATH"
 fi
 
@@ -42,6 +48,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # Declare HOMEs for AMReX, MAESTRO, CASTRO, Microphysics
 export AMREX_HOME="$ASTRO_HOME/amrex"
 export MAESTRO_HOME="$ASTRO_HOME/MAESTRO"
+export MAESTROEX_HOME="$ASTRO_HOME/MaestroEx"
 export CASTRO_HOME="$ASTRO_HOME/Castro"
 export MICROPHYSICS_HOME="$ASTRO_HOME/Microphysics"
 export FBOXLIB_HOME="$ASTRO_HOME/FBoxLib"
@@ -51,6 +58,7 @@ export FBOXLIB_HOME="$ASTRO_HOME/FBoxLib"
 export PATH="$MAESTRO_HOME/Util/postprocessing/urca-tools:$PATH"
 
 # Add AMReX scripts to PATH
+export PATH="$ASTRO_HOME/amrex/Tools/Postprocessing/C_Src:$PATH"
 export PATH="$ASTRO_HOME/amrex/Tools/Postprocessing/F_Src:$PATH"
 
 # Declare location and init function for the MESA SDK

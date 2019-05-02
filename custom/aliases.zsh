@@ -2,6 +2,7 @@
 alias ecs="emacs -nw"
 alias cem="emacsclient -nw"
 alias f2py="f2py3"
+alias pj="pyjournal.py"
 
 # SSH Aliases
 alias handy="ssh -X dwillcox@handy.iacs.stonybrook.edu"
@@ -23,4 +24,4 @@ alias rhea="ssh -X -o ServerAliveInterval=60 dwillcox@rhea.ccs.ornl.gov"
 alias olcf="ssh -X -o ServerAliveInterval=60 dwillcox@home.ccs.ornl.gov"
 alias seawulf="ssh -X -o ServerAliveInterval=60 dwillcox@login.seawulf.stonybrook.edu"
 
-alias zilla="ssh -o ServerAliveInterval=60 dewillcox@zilla.lbl.gov"
+alias zilla="ssh -X -o ServerAliveInterval=60 dewillcox@zilla.lbl.gov"
