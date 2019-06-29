@@ -15,7 +15,7 @@ if [[ "$hostname" == "groot.astro.sunysb.edu" ]]; then
 fi
 
 if [[ "$hostname" == "jade" ]]; then
-    ASTRO_HOME="$HOME"
+    ASTRO_HOME="$HOME/dev-astro"
     export LD_LIBRARY_PATH="$HOME/local/install/hdf5-1.10.4/lib:$LD_LIBRARY_PATH"
 fi
 
@@ -25,6 +25,18 @@ if [[ "$hostname" == "jade" ]]; then
     export PATH="$CUDA_HOME/bin:$PATH"
     export PATH="$CUDA_HOME/NsightCompute-2019.1:$PATH"
     export LD_LIBRARY_PATH="$CUDA_HOME/lib64:$LD_LIBRARY_PATH"
+fi
+
+# Node.js
+if [[ "$hostname" == "jade" ]]; then
+    NODEJS_HOME="$HOME/local/install/node-v10.16.0"
+    export PATH="$NODEJS_HOME/bin:$PATH"
+    export LD_LIBRARY_PATH="$NODEJS_HOME/lib:$LD_LIBRARY_PATH"
+fi
+
+# Amrvis
+if [[ "$hostname" == "jade" ]]; then
+    export PATH="$HOME/dev-amrex/Amrvis:$PATH"
 fi
 
 # Add scripts to path
@@ -60,6 +72,9 @@ export PATH="$MAESTRO_HOME/Util/postprocessing/urca-tools:$PATH"
 # Add AMReX scripts to PATH
 export PATH="$ASTRO_HOME/amrex/Tools/Postprocessing/C_Src:$PATH"
 export PATH="$ASTRO_HOME/amrex/Tools/Postprocessing/F_Src:$PATH"
+export PATH="$ASTRO_HOME/amrex/Tools/Plotfile/1d:$PATH"
+export PATH="$ASTRO_HOME/amrex/Tools/Plotfile/2d:$PATH"
+export PATH="$ASTRO_HOME/amrex/Tools/Plotfile/3d:$PATH"
 
 # Declare location and init function for the MESA SDK
 export MESASDK_ROOT="$ASTRO_HOME/mesa/mesasdk"
@@ -77,3 +92,4 @@ export PATH="$HOME/local/Zotero_linux-x86_64:$PATH"
 
 # Add Visit to PATH
 export PATH="$HOME/local/visit/bin:$PATH"
+

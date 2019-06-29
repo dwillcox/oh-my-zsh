@@ -3,6 +3,10 @@ start_emacs_daemon() {
     emacs --daemon >/dev/null 2>&1
 }
 
+delws () {
+	emacs -nw "$1" --eval '(progn (delete-trailing-whitespace) (save-some-buffers t) (kill-emacs))' && clear
+}
+
 fork() {
     $1 >/dev/null 2>&1 &
 }
