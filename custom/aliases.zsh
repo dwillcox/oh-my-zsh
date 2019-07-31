@@ -24,5 +24,6 @@ alias titan="ssh -X -o ServerAliveInterval=60 dwillcox@titan.ccs.ornl.gov"
 alias rhea="ssh -X -o ServerAliveInterval=60 dwillcox@rhea.ccs.ornl.gov"
 alias olcf="ssh -X -o ServerAliveInterval=60 dwillcox@home.ccs.ornl.gov"
 alias seawulf="ssh -X -o ServerAliveInterval=60 dwillcox@login.seawulf.stonybrook.edu"
+alias cori="ssh -X -o ServerAliveInterval=60 dwillcox@cori.nersc.gov"
 
 alias zilla="ssh -X -o ServerAliveInterval=60 dewillcox@zilla.lbl.gov"

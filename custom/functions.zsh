@@ -12,7 +12,7 @@ fork() {
 }
 
 ddoc() {
-    nohup evince $1 >/dev/null 2>&1 &
+    nohup zathura $1 >/dev/null 2>&1 &
 }
 
 dimg() {
