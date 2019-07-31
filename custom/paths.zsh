@@ -8,6 +8,7 @@ fi
 
 if [[ "$hostname" == "zilla.lbl.gov" || "$hostname" == "zilla" ]]; then
     ASTRO_HOME="$HOME/dev-astro"
+    export PATH="/usr/local/cuda-10.0/bin:$PATH"
 fi
 
 if [[ "$hostname" == "groot.astro.sunysb.edu" ]]; then
@@ -18,6 +19,7 @@ fi
 # Add scripts to path
 export PATH="$HOME/scripts:$PATH"
 export PATH="$ASTRO_HOME/job-run-scripts:$PATH"
+export PATH="$ASTRO_HOME//amrex/Tools/Plotfile:$PATH"
 export PATH="$HOME/simulation_setups/plotting:$PATH"
 
 # Add Python code directories to PYTHONPATH
@@ -41,15 +43,12 @@ export MICROPHYSICS_HOME="$ASTRO_HOME/Microphysics"
 export FBOXLIB_HOME="$ASTRO_HOME/FBoxLib"
 
 
-# Add urca-tools to PATH
-export PATH="$MAESTRO_HOME/Util/postprocessing/urca-tools:$PATH"
-
 # Add AMReX scripts to PATH
 export PATH="$ASTRO_HOME/amrex/Tools/Postprocessing/F_Src:$PATH"
 
 # Declare location and init function for the MESA SDK
 export MESASDK_ROOT="$ASTRO_HOME/mesa/mesasdk"
-export MESA_DIR="$ASTRO_HOME/mesa/mesa-r8118"
+export MESA_DIR="$ASTRO_HOME/mesa/mesa"
 
 # Add lua to PATH
 export PATH="/home/dewillcox/local/lua-5.2.1/bin:$PATH"

@@ -1,13 +1,13 @@
 # Command Aliases
 alias ecs="emacs -nw"
-alias cem="emacsclient -nw"
+alias cem="emacsclient -nw --alternate-editor="
 alias f2py="f2py3"
 
 # SSH Aliases
 alias handy="ssh -X dwillcox@handy.iacs.stonybrook.edu"
 alias eldorado="ssh -X dwillcox@eldorado.astro.sunysb.edu"
 alias zwicky="ssh -X dwillcox@zwicky.astro.sunysb.edu"
-alias melvin="ssh -X dwillcox@melvin.astro.sunysb.edu"
+alias melvin="ssh -X -o ServerAliveInterval=60 dwillcox@melvin.astro.sunysb.edu"
 alias delorean="ssh -X dwillcox@delorean.astro.sunysb.edu"
 alias kirk="ssh -X dwillcox@kirk.astro.sunysb.edu"
 alias fleetwood="ssh -X dwillcox@fleetwood.astro.sunysb.edu"
@@ -23,4 +23,9 @@ alias rhea="ssh -X -o ServerAliveInterval=60 dwillcox@rhea.ccs.ornl.gov"
 alias olcf="ssh -X -o ServerAliveInterval=60 dwillcox@home.ccs.ornl.gov"
 alias seawulf="ssh -X -o ServerAliveInterval=60 dwillcox@login.seawulf.stonybrook.edu"
 
+alias cori="ssh -X -o ServerAliveInterval=60 dwillcox@cori.nersc.gov"
+alias edison="ssh -X -o ServerAliveInterval=60 dwillcox@edison.nersc.gov"
+
 alias zilla="ssh -o ServerAliveInterval=60 dewillcox@zilla.lbl.gov"
+
+alias pj="pyjournal.py"
