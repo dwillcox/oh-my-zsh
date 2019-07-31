@@ -8,7 +8,7 @@ delws () {
 }
 
 fork() {
-    $1 >/dev/null 2>&1 &
+    nohup $@ >/dev/null 2>&1 &
 }
 
 ddoc() {
@@ -30,6 +30,13 @@ toes () {
 jnbook () {
 	jupyter notebook $@ --ip=127.0.0.1
 }
+
+delws () {
+    emacs -nw "$1" --eval '(progn (delete-trailing-whitespace) (save-some-buffers t) (kill-emacs))' && clear
+}
+
+open() {
+    emacs -nw `find . -name $1`
 
 # Establish a SOCKS proxy on localhost port 8880 through
 # the host provided as the argument.
