@@ -2,6 +2,8 @@
 alias ecs="emacs -nw"
 alias cem="emacsclient -nw --alternate-editor="
 alias f2py="f2py3"
+alias pj="pyjournal.py"
+alias mysudo="sudo -E env 'PATH=$PATH'"
 
 # SSH Aliases
 alias handy="ssh -X dwillcox@handy.iacs.stonybrook.edu"
@@ -25,7 +27,6 @@ alias seawulf="ssh -X -o ServerAliveInterval=60 dwillcox@login.seawulf.stonybroo
 
 alias cori="ssh -X -o ServerAliveInterval=60 dwillcox@cori.nersc.gov"
 alias edison="ssh -X -o ServerAliveInterval=60 dwillcox@edison.nersc.gov"
-
-alias zilla="ssh -o ServerAliveInterval=60 dewillcox@zilla.lbl.gov"
+alias zilla="ssh -X -o ServerAliveInterval=60 dewillcox@zilla.lbl.gov"
 
 alias pj="pyjournal.py"
