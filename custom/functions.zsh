@@ -4,7 +4,7 @@ start_emacs_daemon() {
 }
 
 delws () {
-	emacs -nw "$1" --eval '(progn (delete-trailing-whitespace) (save-some-buffers t) (kill-emacs))' && clear
+    emacs -nw "$1" --eval '(progn (delete-trailing-whitespace) (save-some-buffers t) (kill-emacs))' && clear
 }
 
 fork() {
@@ -28,7 +28,7 @@ toes () {
 }
 
 jnbook () {
-	jupyter notebook $@ --ip=127.0.0.1
+    jupyter notebook $@ --ip=127.0.0.1
 }
 
 delws () {
@@ -37,14 +37,15 @@ delws () {
 
 open() {
     emacs -nw `find . -name $1`
+}
 
 # Establish a SOCKS proxy on localhost port 8880 through
 # the host provided as the argument.
 sshtunnel () {
-        ssh -D 8880 $1
+    ssh -D 8880 $1
 }
 
 # Silent find (suppresses permission denied errors)
 sfind () {
-        find $@ 2>&1 | grep -v "Permission denied"
+    find $@ 2>&1 | grep -v "Permission denied"
 }
