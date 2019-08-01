@@ -3,6 +3,7 @@ test -d "${FZF_BASE}" && fzf_base="${FZF_BASE}"
 if [[ -z "${fzf_base}" ]]; then
   fzfdirs=(
     "${HOME}/.fzf"
+    "${HOME}/local/install/fzf"      
     "/usr/local/opt/fzf"
     "/usr/share/fzf"
   )
