@@ -12,18 +12,24 @@ if [[ "$hostname" == "zilla.lbl.gov" || "$hostname" == "zilla" || "$hostname" ==
 fi
 
 if [[ "$hostname" == "groot.astro.sunysb.edu" ]]; then
-    ASTRO_HOME="$HOME"	
+    ASTRO_HOME="$HOME"
 fi
 
 if [[ "$hostname" == "jade" ]]; then
     ASTRO_HOME="$HOME/dev-astro"
     export LD_LIBRARY_PATH="$HOME/local/install/hdf5-1.10.4/lib:$LD_LIBRARY_PATH"
     export PATH="$HOME/local/install/visit2_13_2.linux-x86_64/bin:$PATH"
-    export PATH="$HOME/local/install/ParaView-5.7.0-RC1-MPI-Linux-64bit/bin:$PATH"
+    # export PATH="$HOME/local/install/ParaView-5.5.2-Qt5-MPI-Linux-64bit/bin:$PATH"
+    # export PATH="$HOME/local/install/ParaView-5.7.0-RC1-MPI-Linux-64bit/bin:$PATH"
+    export PATH="$HOME/local/install/ParaView-5.6.1-MPI-Linux-64bit/bin:$PATH"
 fi
 
 if [[ "$hostname" == "jade" ]]; then
     export PATH="/snap/bin:$PATH"
+fi
+
+if [[ "$hostname" == "jade" ]]; then
+    export PATH="$HOME/dev/julia:$PATH"
 fi
 
 # NPM
