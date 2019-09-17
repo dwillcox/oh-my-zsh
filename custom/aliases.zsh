@@ -4,6 +4,7 @@ alias cem="emacsclient -nw --alternate-editor="
 alias f2py="f2py3"
 alias pj="pyjournal.py"
 alias mysudo="sudo -E env 'PATH=$PATH'"
+alias v="nvim"
 
 # SSH Aliases
 alias handy="ssh -X dwillcox@handy.iacs.stonybrook.edu"
