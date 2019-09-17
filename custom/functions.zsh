@@ -45,6 +45,15 @@ sshtunnel () {
     ssh -D 8880 $1
 }
 
+# Given a jupyter notebook running at 127.0.0.1 on a remote machine,
+# connect to it given the remote port where the notebook is running.
+# This port gets mapped via ssh to localhost:8888.
+# arg 1: remote login@machine
+# arg 2: port on remote 127.0.0.1 where notebook is running, e.g. 8888
+sshjupyter () {
+    ssh -N -f -L localhost:8888:127.0.0.1:$2 $1
+}
+
 # Silent find (suppresses permission denied errors)
 sfind () {
     find $@ 2>&1 | grep -v "Permission denied"
