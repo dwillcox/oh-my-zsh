@@ -31,6 +31,10 @@ jnbook () {
     jupyter notebook $@ --ip=127.0.0.1
 }
 
+snbook () {
+    sage --notebook jupyter --ip=127.0.0.1
+}
+
 delws () {
     emacs -nw "$1" --eval '(progn (delete-trailing-whitespace) (save-some-buffers t) (kill-emacs))' && clear
 }
