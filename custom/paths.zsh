@@ -22,6 +22,7 @@ if [[ "$hostname" == "jade" ]]; then
     # export PATH="$HOME/local/install/ParaView-5.5.2-Qt5-MPI-Linux-64bit/bin:$PATH"
     # export PATH="$HOME/local/install/ParaView-5.7.0-RC1-MPI-Linux-64bit/bin:$PATH"
     export PATH="$HOME/local/install/ParaView-5.6.1-MPI-Linux-64bit/bin:$PATH"
+    export PATH="$HOME/dev/sage:$PATH"
 fi
 
 if [[ "$hostname" == "jade" ]]; then
@@ -75,6 +76,9 @@ export FBOXLIB_HOME="$ASTRO_HOME/FBoxLib"
 export PYTHONPATH="$ASTRO_HOME/pyro2:$PYTHONPATH"
 export PYRO_HOME="$ASTRO_HOME/pyro2"
 
+# HYPRE
+export HYPRE_DIR="$ASTRO_HOME/hypre/install"
+export HYPRE_OMP_DIR="$ASTRO_HOME/hypre/install"
 
 # Add AMReX scripts to PATH
 export PATH="$ASTRO_HOME/amrex/Tools/Postprocessing/C_Src:$PATH"
